@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hospital Appointment</title>
+</head>
+
+<body>
+    <div class="parent-container">
+        <div class="container">
+            <form action="">
+                <h1><span> Registration </span> Form</h1>
+                <div class="input-container">
+                    <input type="text" id="fname" placeholder="First Name" required>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="lname" placeholder="Last Name" required>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="username" placeholder="Enter Your Username" required>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="pass" placeholder="Enter Your Password">
+                </div>
+                <div class="input-container">
+                    <input type="password" id="cpass" placeholder="Enter Confirm Password">
+                </div>
+                <div class="input-container">
+                    <select id="role" required>
+                        <option value="" disabled selected hidden>Select Role</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="patient">Patient</option>
+                    </select>
+                </div>
+                <div class="submit-button">
+                    <button class="button">Submit</button>
+                </div>
+                <div class="account-container">
+                    <span>Already have an account? <a href="login.html">Login Now</a> </span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/registration.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hospital Appointment</title>
+</head>
+
+<body>
+    <div class="home-container">
+        <h1>Welcome to the Hospital Appointment System</h1>
+        <div id="doctor-section">
+            <h2>Doctor's Dashboard</h2>
+            <div class="filter-section">
+                <h3>Total Appointments :- <span id="doctor-appointment-count"></span></h3>
+                <select id="doctor-appointment-filter">
+                    <option value="all">All</option>
+                    <option value="upcoming">Upcoming</option>
+                    <option value="cancelled">Cancelled</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <div class="table-section">
+                <table id="doctor-appointments">
+                    <thead>
+                        <tr>
+                            <th>S. No.</th>
+                            <th>Patient Name</th>
+                            <th>Time</th>
+                            <th>Disease</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointment-table-body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="patient-section">
+            <div>
+                <div class="patient-heading">
+                    <h2>Patient's Dashboard</h2>
+                    <button id="add-appointment-button">Add Appointment</button>
+                </div>
+                <div class="filter-section">
+                    <h3>Total Appointments :- <span id="patient-appointment-count"></span></h3>
+                    <select id="patient-appointment-filter">
+                        <option value="all">All</option>
+                        <option value="upcoming">Upcoming</option>
+                        <option value="cancelled">Cancelled</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="add-appointment-popup" class="popup">
+                <form id="add-appointment-form">
+                    <h2>Add Appointment</h2>
+                    <div class="input-container">
+                        <label for="patientname">Your Name:</label>
+                        <input type="text" id="patientname" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="appointment-time">Time and Date:</label>
+                        <input type="datetime-local" id="appointment-time" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="doctor-select">Doctor:</label>
+                        <select id="doctor-select" required>
+                            <option value="" disabled selected hidden>Select Doctor</option>
+                            <option value="Dr. Paresh Vyas">Dr. Paresh Vyas</option>
+                            <option value="Dr. Bipin Desai">Dr. Bipin Desai</option>
+                            <option value="Dr. Sagar Bhanderi">Dr. Sagar Bhanderi</option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <label for="disease-input">Disease:</label>
+                        <input type="text" id="disease-input" placeholder="Enter Disease" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="mobile-input">Mobile Number:</label>
+                        <input type="tel" id="mobile-input" placeholder="Enter Mobile Number" required>
+                    </div>
+                    <div class="submit-button">
+                        <button class="btn" type="submit">Submit</button>
+                        <button class="btn" id="cancel-add-appointment">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+
+</html>
