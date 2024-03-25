@@ -60,7 +60,7 @@ function handlePatientAppointmentFilter() {
 
 function openAddAppointmentPopup() {
     const popup = document.getElementById("add-appointment-popup");
-    popup.style.display = "block";
+    popup.style.display = "flex";
 }
 
 function handleAddAppointmentSubmit(e) {
